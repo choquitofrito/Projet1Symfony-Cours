@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Le titre de l'index
+{% endblock %}
+
+ 
+{% block body %}
+Hello je suis un contenu
+{% endblock %}
+
+{# ex: remplir un bloc dans les vues qui été vide dans le template base #}
+{% block codejs %}
+<script>
+console.log ("coucou");
+</script>
+{% endblock %}
+
+{# ex: "eliminer" un contenu du template de base qui ne nous interesse pas 
+dans cette vue #}
+

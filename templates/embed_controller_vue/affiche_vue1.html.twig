@@ -1,0 +1,12 @@
+{% extends 'base_embed.html.twig' %}
+
+{% block body %}
+<div style="display:inline-block;border: 1px solid black; width:300px; height:400px;">
+Je suis le div dans la vue 1
+</div>
+
+<div style="display:inline-block;float:right;border: 1px solid black; width:200px; height:400px;">
+{{ render (controller ('App\\Controller\\EmbedControllerVueController::donneesDynamiques', 
+{'nombreVilles': 3}))}}
+</div>
+{% endblock %}

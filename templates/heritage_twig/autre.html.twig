@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Le titre de l'autre
+{% endblock %}
+
+ 
+{% block body %}
+Hello je suis le contenu d'autre
+{% endblock %}
+
+{# ex: remplir un bloc dans les vues qui été vide dans le template base #}
+{% block codejs %}
+<script>
+console.log ("autre");
+</script>
+{% endblock %}
+
+{# ex: "eliminer" un contenu du template de base qui ne nous interesse pas 
+dans cette vue #}
+{% block extrajs %}
+{% endblock %}

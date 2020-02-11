@@ -2,11 +2,18 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}Titre base{% endblock %}</title>
+        
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block codejs %}{% endblock %} 
+
+        {% block extrajs %}
+        
+        <script>
+        console.log ("Je suis un code js pour un sous-ensemble de pages");
+        </script>
+        {% endblock %}
     </body>
 </html>
