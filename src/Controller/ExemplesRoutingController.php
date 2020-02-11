@@ -31,20 +31,18 @@ class ExemplesRoutingController extends AbstractController
     /**
      * @Route ("/afficher/bonjour/perso/{nom}/{prenom}")
      */
-    public function afficherBonjourPerso (Request $req){
-        return new Response ("Bonjour " . $req->get('nom') . "," . $req->get('prenom'));
-    } 
+    public function afficherBonjourPerso(Request $req)
+    {
+        return new Response("Bonjour " . $req->get('nom') . "," . $req->get('prenom'));
+    }
 
     /**
      * @Route ("/exemple/redirect/imdb/{titre}")
      */
-    public function exempleRedirectImdb (Request $req){
+    public function exempleRedirectImdb(Request $req)
+    {
         $titre = $req->get('titre');
-        $url = "https://www.imdb.com/find?q=". $titre ."&ref_=nv_sr_sm";
+        $url = "https://www.imdb.com/find?q=" . $titre . "&ref_=nv_sr_sm";
         return $this->redirect($url);
-
     }
-
-
-
 }
