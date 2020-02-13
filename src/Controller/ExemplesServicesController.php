@@ -4,6 +4,7 @@ namespace App\Controller;
 
 
 
+use App\Services\IRail;
 use App\Services\Chucky;
 use App\Services\Bonjour;
 use Psr\Log\LoggerInterface;
@@ -54,5 +55,16 @@ class ExemplesServicesController extends AbstractController
         $msg = $objetChuckyLogger->getPhrase();
         return $this->render('exemples_services/utilise_chucky_logger.html.twig', ['msg' => $msg]);
     }
-    
+
+    /**
+     * @Route ("exemples/services/utilise/irail")
+     */
+    public function utiliseIrail (IRail $objetIRail){
+        $arrayInfo = $objetIRail->getInfoGare();
+
+
+        dump ($arrayInfo);
+        die();
+    }
+
 }
